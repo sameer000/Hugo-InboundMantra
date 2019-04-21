@@ -8,19 +8,16 @@ function myFunction() {
   }
 }
 
-// Sticky Header
-window.onscroll = function() {myFunction()};
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
 
-var header = document.getElementById("myHeader");
-var sticky = header.offsetTop;
+     //>=, not <=
+    if (scroll >= 68) {
+        //clearHeader, not clearheader - caps H
+        $(".header").addClass("sticky");
+    }
+}); //missing );
 
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
 
 // slider
 String.prototype.rightChars = function(n){
