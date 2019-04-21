@@ -650,8 +650,27 @@ background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 }
-
-
+.headline {
+    position: relative;
+}
+.headline .banner-content {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.headline .banner-content h1 {
+    font-size: 60px;
+    font-weight: 700;
+      letter-spacing: 1px;
+      text-align: center;
+}
+.headline .banner-content h1 span {
+    color: #f8991d;
+}
+.headline .banner-content p {
+    font-size: 16px;
+}
 
 @media screen and (max-width: 600px) {
 .topnav a:not(:first-child) {display: none;}
